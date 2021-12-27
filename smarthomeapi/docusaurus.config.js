@@ -24,9 +24,8 @@ const config = {
                 docs: {
                     routeBasePath: '/', // Serve the docs at the site's root
                     sidebarPath: require.resolve('./sidebars.js'),
-                    // Please change this to your repo.
                     editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                        'https://github.com/hdimon/SmartHomeApi-project-site/tree/main/smarthomeapi/',
                 },
                 blog: false,
                 theme: {
