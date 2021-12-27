@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
     title: 'SmartHomeApi',
     tagline: 'Cross-platform plugin-based system for home automation',
-    url: 'https://your-docusaurus-test-site.com',
+    url: 'https://smarthomeapi.netlify.app',
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
