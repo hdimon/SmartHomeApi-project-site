@@ -6,9 +6,9 @@ sidebar_position: 10
 
 There are plans to implement some features which could provide better usability and reliability of your automation system.
 
-## Plugin manager
+## Plugins manager
 
-Currently there is only one way to install plugins - put them manually into Plugins folder of SmartHomeApi data directory. It's not very convenient way so it would be nice feature to implement plugin manager which will download plugins and install them.
+Currently there is only one way to install plugins - put them manually into Plugins folder of SmartHomeApi data directory. It's not very convenient way so it would be nice feature to implement plugins manager which will download plugins and install them.
 
 ## Multi-instance
 
