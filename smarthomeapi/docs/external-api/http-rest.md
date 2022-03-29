@@ -37,7 +37,15 @@ Returns value of state for provided item and parameter (i.e. state key).
 
 ### `/Execute/{itemId}/{command}?{query_parameters}`
 
-Returns result of executing command by item with provided id. The action is useful for cases when item produces data like byte array or something else and (or) it's needed to request it **synchronously**.
+Returns result of executing command by item with provided id. The action is useful for cases when item produces data like byte array or something else and (or) it's needed to request it **synchronously**. SmartHomeApi transforms `query_parameters` to `Dictionary<string, object>`. It means that this GET action can be used for executing methods only with input parameter `Dictionary<string, T>`.
+
+Example of methods which can be executed via this GET action:
+
+```csharp
+Task DictionaryInputTest(Dictionary<string, object> data);
+
+Task DictionaryInputTest(Dictionary<string, int> data);
+```
 
 ## POST actions
 
@@ -64,8 +72,6 @@ SmartHomeApi input data types are:
 
 `locale` - optional parameter, use it for example if you setup integration with other system working in different locale. If not provided then `value` will be considered as it is in default system culture format (can be found in `AppSettings -> ApiCulture` in appsettings.json file).
 
-### `/Execute/{itemId}/{command}?{query_parameters}`
+### `/Execute/{itemId}/{command}`
 
-Returns result of executing command by item with provided id. The action is useful for cases when item produces data like byte array or something else and (or) it's needed to request it **synchronously**.
-
-**Since it's POST http method then it supports JSON object in http body.** SmartHomeApi will try to convert JSON to `IDictionary<string, object>`.
+Returns result of executing command by item with provided id. Body should be JSON object, Content-Type: application/json. SmartHomeApi will try to convert JSON to object with the same type like executed method.
