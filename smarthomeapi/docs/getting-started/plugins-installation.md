@@ -17,7 +17,7 @@ Let's look how to install plugins on example of [SmartHomeApi.Plugins.VirtualSta
 	"ItemType": "Virtual_States"
 }
 ```
-4. If you [request](/api/http-rest) now SmartHomeApi state you should see created item.
+4. If you [request](/external-api/http-rest) now SmartHomeApi state you should see created item.
 
 ## Installation via plugins manager
 
